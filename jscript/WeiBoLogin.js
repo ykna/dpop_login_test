@@ -21,4 +21,4 @@ class WeiBoLogin {
 
 };
 
-module.exports = login;
+module.exports = WeiBoLogin;
