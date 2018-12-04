@@ -2,13 +2,13 @@ class WeiBoLogin {
     
     //登录
     static async queryBD(page,username,password){
-        let userInput = "#pl_login_form > div > div:nth-child(3) > div.info_list username > div > input";//网易邮箱登陆用户框 
+        let userInput = "#loginname";//网易邮箱登陆用户框 
         let passInput = "#pl_login_form > div > div:nth-child(3) > div.info_list.password > div > input";
         let sublabel ="#pl_login_form > div > div:nth-child(3) > div.info_list.login_btn > a"; 
         
 
-        await page.goto('https://weibo.com/');
-        await page.waitFor(1000);
+        await page.goto('https://weibo.com');
+        await page.waitFor(5000);
         await page.type(userInput,username,{delay:100});//输入用户名
         await page.type(passInput,password,{delay:100});//输入密码
         await page.waitFor(1000);
