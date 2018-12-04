@@ -2,7 +2,7 @@
 
 const assert = require('assert');
 const puppeteer = require('puppeteer');
-const data = require('../../outPut/popdate.json');
+const data = require('../../dataTemp/popdate.json');
 // const longin = require('../jscript/login.js');
 const weiBoLogin = require('../jscript/WeiBoLogin.js')
 
