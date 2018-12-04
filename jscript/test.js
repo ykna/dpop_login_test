@@ -34,7 +34,7 @@ describe('公共测试',function() {
     //     assert.ok(await longin.gotoLogin(page,data.parameterData[0].userName,data.parameterData[0].password),'登录失败！');
     // });
 
-    it('网厅登录测试',async function() {
+    it('微博登录测试',async function() {
         //断言是否登录成功
         assert.ok(await weiBoLogin.queryBD(page,data.parameterData[0].userName,data.parameterData[0].password),'登录失败！');
     });

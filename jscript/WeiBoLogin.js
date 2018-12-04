@@ -8,7 +8,7 @@ class WeiBoLogin {
         
 
         await page.goto('https://weibo.com');
-        await page.waitFor(5000);
+        await page.waitFor(10000);
         await page.type(userInput,username,{delay:100});//输入用户名
         await page.type(passInput,password,{delay:100});//输入密码
         await page.waitFor(1000);
