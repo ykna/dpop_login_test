@@ -3,7 +3,8 @@
 const assert = require('assert');
 const puppeteer = require('puppeteer');
 const data = require('../../outPut/popdate.json');
-const longin = require('../jscript/login.js');
+// const longin = require('../jscript/login.js');
+const weiBoLogin = require('../jscript/WeiBoLogin.js')
 
 let browser;
 let page;
@@ -28,9 +29,14 @@ after(async function() {
 });
 describe('公共测试',function() {
     this.timeout(0);
+    // it('网厅登录测试',async function() {
+    //     //断言是否登录成功
+    //     assert.ok(await longin.gotoLogin(page,data.parameterData[0].userName,data.parameterData[0].password),'登录失败！');
+    // });
+
     it('网厅登录测试',async function() {
         //断言是否登录成功
-        assert.ok(await longin.gotoLogin(page,data.parameterData[0].userName,data.parameterData[0].password),'登录失败！');
+        assert.ok(await weiBoLogin.queryBD(page,data.parameterData[0].userName,data.parameterData[0].password),'登录失败！');
     });
 
 });
